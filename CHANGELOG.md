@@ -1,3 +1,7 @@
+## 1.0.1
+
+- README: pub.dev badge, install link, and "Publishing updates" section.
+
 ## 1.0.0
 
 - Initial release.

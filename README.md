@@ -1,6 +1,16 @@
 # mf_bluetooth_printer
 
+[![pub package](https://img.shields.io/pub/v/mf_bluetooth_printer.svg)](https://pub.dev/packages/mf_bluetooth_printer)
+
 A Flutter package for **MF Bluetooth Printer** — print receipts to Bluetooth thermal printers using ESC/POS commands. Supports 3-inch and 4-inch paper, configurable receipt layout (logo, customer fields, decimals), and reconnection to a saved printer.
+
+## Screenshots
+
+| Example app – scan & connect | Sample receipt |
+|------------------------------|----------------|
+| ![Example app](doc/screenshot_app.jpg) |
+
+Add your own images in the `doc/` folder and use the filenames above, or replace the paths with your image URLs.
 
 ## Features
 
@@ -12,11 +22,11 @@ A Flutter package for **MF Bluetooth Printer** — print receipts to Bluetooth t
 
 ## Installation
 
-Add to your `pubspec.yaml`:
+Install from [pub.dev](https://pub.dev/packages/mf_bluetooth_printer). Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  mf_bluetooth_printer: ^1.0.0
+  mf_bluetooth_printer: ^1.0.1
 ```
 
 Then run `flutter pub get`.
@@ -124,7 +134,7 @@ printer.dispose();
 - Load printer format (3"/4") and design from your DB, then pass `PrinterSize` and `PrinterDesignSettings` into `printReceipt(...)`. You can build `PrinterDesignSettings` from your existing map with `PrinterDesignSettings.fromMap(yourMap)`.
 - Keep using your app’s `PrinterSettingsDB` / `PrinterDesignSettingsDB` to persist format and design; the package only needs the in-memory values when calling `printReceipt` and when reconnecting (use `reconnectToPrinter(savedMac)` with the MAC you store).
 
-## Publishing to pub.dev
+## Publishing updates to pub.dev
 
 1. **Validate**: Run `dart pub publish --dry-run` (or `flutter pub publish --dry-run`) and fix any reported issues.
 2. **Publish**: Run `dart pub publish` (or `flutter pub publish`). You’ll need a [pub.dev account](https://pub.dev) and to confirm the upload.

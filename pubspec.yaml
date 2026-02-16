@@ -1,6 +1,6 @@
 name: mf_bluetooth_printer
 description: A Flutter package for MF Bluetooth Printer — print receipts to Bluetooth thermal printers via ESC/POS.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/mufastp/bluetooth_thermal_printer
 repository: https://github.com/mufastp/bluetooth_thermal_printer
 issue_tracker: https://github.com/mufastp/bluetooth_thermal_printer/issues
