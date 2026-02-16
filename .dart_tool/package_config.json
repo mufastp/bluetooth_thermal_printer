@@ -326,7 +326,7 @@
       "languageVersion": "3.8"
     },
     {
-      "name": "bluetooth_thermal_printer",
+      "name": "mf_bluetooth_printer",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.0"

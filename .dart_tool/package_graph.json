@@ -1,10 +1,10 @@
 {
   "roots": [
-    "bluetooth_thermal_printer"
+    "mf_bluetooth_printer"
   ],
   "packages": [
     {
-      "name": "bluetooth_thermal_printer",
+      "name": "mf_bluetooth_printer",
       "version": "1.0.0",
       "dependencies": [
         "flutter",

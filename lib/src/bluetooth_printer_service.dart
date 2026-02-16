@@ -119,10 +119,18 @@ class BluetoothPrinterService {
           Permission.location,
         ].request();
 
-        if (statuses[Permission.bluetoothScan] != PermissionStatus.granted ||
-            statuses[Permission.bluetoothConnect] != PermissionStatus.granted) {
+        final scanGranted =
+            statuses[Permission.bluetoothScan] == PermissionStatus.granted;
+        final connectGranted =
+            statuses[Permission.bluetoothConnect] == PermissionStatus.granted;
+        if (!scanGranted || !connectGranted) {
+          final denied = [
+            if (!scanGranted) 'Bluetooth scan',
+            if (!connectGranted) 'Bluetooth connect',
+          ].join(', ');
           throw Exception(
-            'Bluetooth permissions are required to scan for printers.',
+            'Bluetooth permissions are required to scan for printers. '
+            'Please grant $denied in your device Settings.',
           );
         }
       }

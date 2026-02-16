@@ -1,4 +1,4 @@
-# bluetooth_thermal_printer
+# mf_bluetooth_printer
 
 A Flutter package for **MF Bluetooth Printer** — print receipts to Bluetooth thermal printers using ESC/POS commands. Supports 3-inch and 4-inch paper, configurable receipt layout (logo, customer fields, decimals), and reconnection to a saved printer.
 
@@ -16,7 +16,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  bluetooth_thermal_printer: ^1.0.0
+  mf_bluetooth_printer: ^1.0.0
 ```
 
 Then run `flutter pub get`.

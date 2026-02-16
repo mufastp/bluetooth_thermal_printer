@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart' as fbp;
-import 'package:bluetooth_thermal_printer/bluetooth_thermal_printer.dart';
+import 'package:mf_bluetooth_printer/mf_bluetooth_printer.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 void main() => runApp(const MyApp());
 
@@ -38,8 +39,15 @@ class _PrinterExamplePageState extends State<PrinterExamplePage> {
       await _printer.startScan();
     } catch (e) {
       if (mounted) {
+        final msg = e.toString().replaceFirst('Exception: ', '');
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Scan error: $e')),
+          SnackBar(
+            content: Text(msg),
+            action: SnackBarAction(
+              label: 'Settings',
+              onPressed: () => openAppSettings(),
+            ),
+          ),
         );
       }
     }
@@ -172,7 +180,8 @@ class _PrinterExamplePageState extends State<PrinterExamplePage> {
                         title: Text(r.device.platformName.isNotEmpty
                             ? r.device.platformName
                             : r.device.remoteId.str),
-                        subtitle: Text('${r.device.remoteId.str}  RSSI: ${r.rssi}'),
+                        subtitle:
+                            Text('${r.device.remoteId.str}  RSSI: ${r.rssi}'),
                         onTap: () => _connect(r.device),
                       )),
                 ],

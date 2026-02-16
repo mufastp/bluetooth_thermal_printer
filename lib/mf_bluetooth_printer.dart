@@ -1,5 +1,5 @@
-/// Bluetooth thermal printer package – connect to ESC/POS printers and print receipts.
-library bluetooth_thermal_printer;
+/// MF Bluetooth Printer – connect to ESC/POS printers and print receipts.
+library mf_bluetooth_printer;
 
 export 'src/bluetooth_printer_service.dart';
 export 'src/esc_pos_generator.dart';

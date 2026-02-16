@@ -1,19 +1,19 @@
 {
   "roots": [
-    "bluetooth_thermal_printer_example"
+    "mf_bluetooth_printer_example"
   ],
   "packages": [
     {
-      "name": "bluetooth_thermal_printer_example",
+      "name": "mf_bluetooth_printer_example",
       "version": "0.0.0",
       "dependencies": [
-        "bluetooth_thermal_printer",
-        "flutter"
+        "flutter",
+        "mf_bluetooth_printer"
       ],
       "devDependencies": []
     },
     {
-      "name": "bluetooth_thermal_printer",
+      "name": "mf_bluetooth_printer",
       "version": "1.0.0",
       "dependencies": [
         "flutter",
@@ -45,13 +45,47 @@
       ]
     },
     {
-      "name": "vector_math",
-      "version": "2.2.0",
-      "dependencies": []
+      "name": "permission_handler",
+      "version": "11.4.0",
+      "dependencies": [
+        "flutter",
+        "meta",
+        "permission_handler_android",
+        "permission_handler_apple",
+        "permission_handler_html",
+        "permission_handler_platform_interface",
+        "permission_handler_windows"
+      ]
+    },
+    {
+      "name": "image",
+      "version": "4.7.2",
+      "dependencies": [
+        "archive",
+        "meta",
+        "xml"
+      ]
+    },
+    {
+      "name": "flutter_blue_plus",
+      "version": "1.36.8",
+      "dependencies": [
+        "flutter",
+        "flutter_blue_plus_android",
+        "flutter_blue_plus_darwin",
+        "flutter_blue_plus_linux",
+        "flutter_blue_plus_platform_interface",
+        "flutter_blue_plus_web"
+      ]
     },
     {
       "name": "sky_engine",
       "version": "0.0.0",
+      "dependencies": []
+    },
+    {
+      "name": "vector_math",
+      "version": "2.2.0",
       "dependencies": []
     },
     {
@@ -77,35 +111,14 @@
       "dependencies": []
     },
     {
-      "name": "clock",
-      "version": "1.1.2",
-      "dependencies": []
-    },
-    {
       "name": "path",
       "version": "1.9.1",
       "dependencies": []
     },
     {
-      "name": "permission_handler",
-      "version": "11.4.0",
-      "dependencies": [
-        "flutter",
-        "meta",
-        "permission_handler_android",
-        "permission_handler_apple",
-        "permission_handler_html",
-        "permission_handler_platform_interface",
-        "permission_handler_windows"
-      ]
-    },
-    {
-      "name": "permission_handler_windows",
-      "version": "0.2.1",
-      "dependencies": [
-        "flutter",
-        "permission_handler_platform_interface"
-      ]
+      "name": "clock",
+      "version": "1.1.2",
+      "dependencies": []
     },
     {
       "name": "permission_handler_platform_interface",
@@ -117,16 +130,8 @@
       ]
     },
     {
-      "name": "permission_handler_android",
-      "version": "12.1.0",
-      "dependencies": [
-        "flutter",
-        "permission_handler_platform_interface"
-      ]
-    },
-    {
-      "name": "permission_handler_apple",
-      "version": "9.4.7",
+      "name": "permission_handler_windows",
+      "version": "0.2.1",
       "dependencies": [
         "flutter",
         "permission_handler_platform_interface"
@@ -143,31 +148,28 @@
       ]
     },
     {
-      "name": "flutter_web_plugins",
-      "version": "0.0.0",
+      "name": "permission_handler_apple",
+      "version": "9.4.7",
       "dependencies": [
-        "flutter"
+        "flutter",
+        "permission_handler_platform_interface"
       ]
     },
     {
-      "name": "web",
-      "version": "1.1.1",
-      "dependencies": []
-    },
-    {
-      "name": "plugin_platform_interface",
-      "version": "2.1.8",
+      "name": "permission_handler_android",
+      "version": "12.1.0",
       "dependencies": [
-        "meta"
+        "flutter",
+        "permission_handler_platform_interface"
       ]
     },
     {
-      "name": "image",
-      "version": "4.7.2",
+      "name": "xml",
+      "version": "6.6.1",
       "dependencies": [
-        "archive",
+        "collection",
         "meta",
-        "xml"
+        "petitparser"
       ]
     },
     {
@@ -180,63 +182,6 @@
       ]
     },
     {
-      "name": "posix",
-      "version": "6.0.3",
-      "dependencies": [
-        "ffi",
-        "meta",
-        "path"
-      ]
-    },
-    {
-      "name": "crypto",
-      "version": "3.0.7",
-      "dependencies": [
-        "typed_data"
-      ]
-    },
-    {
-      "name": "typed_data",
-      "version": "1.4.0",
-      "dependencies": [
-        "collection"
-      ]
-    },
-    {
-      "name": "ffi",
-      "version": "2.2.0",
-      "dependencies": []
-    },
-    {
-      "name": "xml",
-      "version": "6.6.1",
-      "dependencies": [
-        "collection",
-        "meta",
-        "petitparser"
-      ]
-    },
-    {
-      "name": "petitparser",
-      "version": "7.0.2",
-      "dependencies": [
-        "collection",
-        "meta"
-      ]
-    },
-    {
-      "name": "flutter_blue_plus",
-      "version": "1.36.8",
-      "dependencies": [
-        "flutter",
-        "flutter_blue_plus_android",
-        "flutter_blue_plus_darwin",
-        "flutter_blue_plus_linux",
-        "flutter_blue_plus_platform_interface",
-        "flutter_blue_plus_web"
-      ]
-    },
-    {
       "name": "flutter_blue_plus_web",
       "version": "7.0.2",
       "dependencies": [
@@ -244,13 +189,6 @@
         "flutter_blue_plus_platform_interface",
         "flutter_web_plugins",
         "web"
-      ]
-    },
-    {
-      "name": "flutter_blue_plus_platform_interface",
-      "version": "7.0.0",
-      "dependencies": [
-        "flutter"
       ]
     },
     {
@@ -280,10 +218,77 @@
       ]
     },
     {
+      "name": "flutter_blue_plus_platform_interface",
+      "version": "7.0.0",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
+      "dependencies": [
+        "meta"
+      ]
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "flutter_web_plugins",
+      "version": "0.0.0",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "petitparser",
+      "version": "7.0.2",
+      "dependencies": [
+        "collection",
+        "meta"
+      ]
+    },
+    {
+      "name": "posix",
+      "version": "6.0.3",
+      "dependencies": [
+        "ffi",
+        "meta",
+        "path"
+      ]
+    },
+    {
+      "name": "crypto",
+      "version": "3.0.7",
+      "dependencies": [
+        "typed_data"
+      ]
+    },
+    {
+      "name": "rxdart",
+      "version": "0.28.0",
+      "dependencies": []
+    },
+    {
       "name": "bluez",
       "version": "0.8.3",
       "dependencies": [
         "dbus"
+      ]
+    },
+    {
+      "name": "ffi",
+      "version": "2.2.0",
+      "dependencies": []
+    },
+    {
+      "name": "typed_data",
+      "version": "1.4.0",
+      "dependencies": [
+        "collection"
       ]
     },
     {
@@ -295,11 +300,6 @@
         "meta",
         "xml"
       ]
-    },
-    {
-      "name": "rxdart",
-      "version": "0.28.0",
-      "dependencies": []
     },
     {
       "name": "args",
