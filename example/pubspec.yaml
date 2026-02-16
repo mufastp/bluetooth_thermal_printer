@@ -1,0 +1,12 @@
+name: bluetooth_thermal_printer_example
+description: Example app for bluetooth_thermal_printer package.
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bluetooth_thermal_printer:
+    path: ../
